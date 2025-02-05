@@ -1,0 +1,175 @@
+/* Variables de tema */
+:root {
+  --light-bg: #f8fafc;
+  --light-text: #1e293b;
+  --dark-bg: #1e293b;
+  --dark-text: #e2e8f0;
+  --accent-color: #3b82f6; /* Azul Tailwind */
+}
+
+/* Tema Claro */
+body[data-theme="light"] {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
+
+/* Tema Oscuro */
+body[data-theme="dark"] {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(255, 255, 255, 0.8); /* Transparencia para efecto moderno */
+  color: var(--light-text);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos en modo oscuro */
+body[data-theme="dark"] .navbar {
+  background: rgba(30, 41, 59, 0.8);
+  color: var(--dark-text);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Lista de navegación */
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.navbar ul li {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+/* Enlace normal */
+.navbar ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Resaltar enlace activo */
+.navbar ul li.active {
+  background: var(--accent-color);
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Enlace activo en modo oscuro */
+body[data-theme="dark"] .navbar ul li.active {
+  background: #2563eb; /* Azul más fuerte en modo oscuro */
+}
+
+/* Animación en hover */
+.navbar ul li:hover {
+  background: var(--accent-color);
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Botones de tema e idioma */
+.controls {
+  display: flex;
+  gap: 1rem;
+}
+
+button {
+  font-size: 1.2rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.3s;
+  color: inherit;
+}
+
+button:hover {
+  transform: scale(1.2);
+  color: var(--accent-color);
+}
+
+/* Secciones */
+section {
+  padding: 4rem;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #475569;
+}
+
+body[data-theme="dark"] p {
+  color: #94a3b8;
+}
+
+/* Fuentes */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Merriweather', serif;
+}
+
+/* Estilo para la pantalla principal */
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Sección hero (mensaje inicial) */
+.hero {
+  height: 100vh; /* Ocupa toda la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  width: 100%;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  max-width: 700px;
+  color: var(--light-text);
+}
+
+body[data-theme="dark"] .hero p {
+  color: var(--dark-text);
+}
+
+/* Asegurar que las otras secciones solo se vean al hacer scroll */
+.content {
+  width: 100%;
+}

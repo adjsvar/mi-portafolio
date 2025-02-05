@@ -1,0 +1,16 @@
+{
+    "es": {
+      "home": { "title": "Bienvenido", "description": "Este es mi portafolio." },
+      "about": { "title": "Sobre mí", "description": "Soy desarrollador web." },
+      "projects": { "title": "Proyectos", "description": "Aquí están mis proyectos." },
+      "contact": { "title": "Contacto", "description": "Envíame un mensaje." },
+      "navbar": { "home": "Inicio", "about": "Sobre mí", "projects": "Proyectos", "contact": "Contacto" }
+    },
+    "en": {
+      "home": { "title": "Welcome", "description": "This is my portfolio." },
+      "about": { "title": "About Me", "description": "I am a web developer." },
+      "projects": { "title": "Projects", "description": "Here are my projects." },
+      "contact": { "title": "Contact", "description": "Send me a message." },
+      "navbar": { "home": "Home", "about": "About", "projects": "Projects", "contact": "Contact" }
+    }
+}
